@@ -1,6 +1,7 @@
-from config import load_config
-from weather import get_weather
-from formatter_1 import format_daily_weather
+from src.config import load_config
+from src.weather import get_weather
+from src.formatter_1 import format_daily_weather
+
 
 def main():
     cfg = load_config()
