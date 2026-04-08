@@ -1,10 +1,13 @@
 import os
-from src.logger import setup_logger
-from src.config import load_config
-from src.weather import get_weather
-from src.formatter_1 import format_daily_weather
-from src.alerts import check_severe_weather
-from src.mastodon_client import post_status
+import sys
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout.reconfigure(encoding='utf-8')
+from .logger import setup_logger
+from .config import load_config
+from .weather import get_weather
+from .formatter_1 import format_daily_weather
+from .alerts import check_severe_weather
+from .mastodon_client import post_status
 
 def main():
     logger = setup_logger()
