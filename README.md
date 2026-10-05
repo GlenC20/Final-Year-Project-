@@ -1,5 +1,62 @@
 # Final Year
+# Final Year Project – Self-Hosted Mastodon Server and Alert Bot
 
+## Overview
+
+This project was developed as my final-year project for my BSc in Computer Science and Software Engineering at Maynooth University.
+
+The aim of the project was to deploy and configure a self-hosted Mastodon social media server and develop a Python-based bot capable of posting automated alerts to the platform.
+
+The project involved server deployment, containerised services, database configuration, API integration, debugging, and Linux system administration.
+
+## Features
+
+- Self-hosted Mastodon server deployed on a Linux VPS
+- Containerised deployment using Docker and Docker Compose
+- PostgreSQL database configuration
+- Redis integration
+- Mastodon web, streaming, and background worker services
+- Admin and bot account configuration
+- Python bot for automated alert posting
+- Mastodon API integration
+- Server troubleshooting and debugging
+- Environment variable and application configuration
+
+## Technologies Used
+
+- Python
+- Mastodon API
+- Docker
+- Docker Compose
+- Linux
+- PostgreSQL
+- Redis
+- Ruby on Rails
+- Git
+- VPS Hosting
+
+## System Architecture
+
+The Mastodon deployment is made up of several services running in Docker containers:
+
+- **Web** – Mastodon web application
+- **Sidekiq** – Background job processing
+- **Streaming** – Real-time streaming service
+- **PostgreSQL** – Main database
+- **Redis** – Caching and background job support
+
+The Python alert bot communicates with the Mastodon server through the Mastodon API and can automatically publish posts to the configured bot account.
+
+## Python Alert Bot
+
+A Python script was developed to interact with the Mastodon API.
+
+The bot authenticates with the Mastodon server and can automatically publish alert messages.
+
+Example functionality:
+
+```python
+mastodon.status_post("Example automated alert")
 
 
 ## Getting started
